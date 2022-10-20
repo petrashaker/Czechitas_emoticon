@@ -1,1 +1,1 @@
-# ksichtici-zadani
+# Emotikon - zadání
