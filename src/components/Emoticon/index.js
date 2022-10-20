@@ -1,15 +1,14 @@
 import React from 'react';
 import './style.css';
 
-import eyesImg from '../../img/eyes2.svg';
-import mouthImg from '../../img/mouth2.svg';
+import { useSettings } from '../../setting-context';
 
 const Emoticon = () => {
-
+	const {eyes, mouth, color} = useSettings();
 	return (
-		<div className='emoticon' style={{ backgroundColor: '#ff2e12' }}>
-			<img className="emoticon__eyes" src={eyesImg} />
-			<img className="emoticon__mouth" src={mouthImg} />
+		<div className='emoticon' style={{ backgroundColor: color }}>
+			<img className="emoticon__eyes" src={eyes} />
+			<img className="emoticon__mouth" src={mouth} />
 		</div>
 	);
 }

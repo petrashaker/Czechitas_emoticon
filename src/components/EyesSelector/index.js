@@ -1,11 +1,14 @@
 import React from 'react';
 
 import {eyesData} from '../../data';
+import { useSettings } from '../../setting-context';
 
 const EyesSelector = () => {
+	const {handleChange} = useSettings();
 
 	const handleClick = (item) => {
 		console.log('eyes', item.id);
+		handleChange(item.image)
 	}
 
 	return (

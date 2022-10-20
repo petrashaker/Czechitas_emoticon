@@ -1,11 +1,14 @@
 import React from 'react';
 
 import {colorsData} from '../../data';
+import { useSettings } from '../../setting-context';
 
 const ColorSelector = () => {
+	const {handleChange} = useSettings();
 
 	const handleClick = (item) => {
 		console.log('color', item.id);
+		handleChange(item.value)
 	}
 
 	return (
