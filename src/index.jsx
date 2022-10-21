@@ -22,3 +22,5 @@ const App = () => {
 };
 
 createRoot(document.querySelector("#app")).render(<App />);
+
+//https://kodim.cz/kurzy/react-2/postupy/state-management/cv-context-opakovani

@@ -4,11 +4,11 @@ import {colorsData} from '../../data';
 import { useSettings } from '../../setting-context';
 
 const ColorSelector = () => {
-	const {handleChange} = useSettings();
+	const {handleColorChange} = useSettings();
 
 	const handleClick = (item) => {
 		console.log('color', item.id);
-		handleChange(item.value)
+		handleColorChange(item.value)
 	}
 
 	return (

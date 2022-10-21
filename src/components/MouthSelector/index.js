@@ -4,11 +4,11 @@ import {mouthData} from '../../data';
 import { useSettings } from '../../setting-context';
 
 const MouthSelector = () => {
-	const {handleChange} = useSettings();
+	const {handleMouthChange} = useSettings();
 
 	const handleClick = (item) => {
 		console.log('mouth', item.id);
-		handleChange(item.image);
+		handleMouthChange(item.image);
 	}
 
 	return (
