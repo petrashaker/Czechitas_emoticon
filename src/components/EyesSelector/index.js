@@ -4,11 +4,11 @@ import {eyesData} from '../../data';
 import { useSettings } from '../../setting-context';
 
 const EyesSelector = () => {
-	const { handleEyesChange } = useSettings();
+	const { settingsChange } = useSettings();
 
 	const handleClick = (item) => {
 		console.log('eyes', item.id);
-		handleEyesChange(item.image);
+		settingsChange({ eyes: item.image })
 	}
 
 	return (

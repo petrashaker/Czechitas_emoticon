@@ -12,37 +12,11 @@ const SettingContextProvider = ({ children }) => {
     color: colorsData[3].image,
   });
 
-  // const handleChange = (newItem, newMouth, newColor) => {
-  //     setSettings(prevState => ({
-  //         ...prevState,
-  //         eyes: newEyes,
-  //         mouth: newMouth,
-  //         color: newColor,
-  //     }))
-  //     console.log(newEyes, newMouth, newColor)
-  //     // setSettings({
-  //     //     eyes: newEyes,
-  //     //     mouth: newMouth,
-  //     //     color: newColor
-  //     // })
-  // }
-
-  const handleEyesChange = (newEyes) => {
-    setSettings((prevState) => ({
-      ...prevState,
-      eyes: newEyes,
-    }));
-  };
-  const handleMouthChange = (newMouth) => {
-    setSettings((prevState) => ({
-      ...prevState,
-      mouth: newMouth,
-    }));
-  };
-  const handleColorChange = (newColor) => {
-    setSettings((prevState) => ({
-      ...prevState,
-      color: newColor,
+  const settingsChange = (newSettings) => {
+    setSettings((prevState) => ({     
+      ...prevState, 
+      ...settings,
+      ...newSettings,
     }));
   };
 
@@ -50,9 +24,7 @@ const SettingContextProvider = ({ children }) => {
     <SettingContext.Provider
       value={{
         ...settings,
-        handleEyesChange,
-        handleMouthChange,
-        handleColorChange,
+        settingsChange
       }}
     >
       {children}
